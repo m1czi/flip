@@ -1,0 +1,16 @@
+.container{
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+.card{
+
+    height: 300px;
+    width: 200px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/01_of_spades_A.svg/1200px-01_of_spades_A.svg.png");
+    background-position: center;
+    border: red;
+    
+    
+    
+}
