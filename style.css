@@ -1,28 +1,81 @@
 .container{
+    background: rgb(0,232,255);
+    background: linear-gradient(0deg, rgba(0,232,255,1) 0%, rgba(4,0,254,1) 100%);
+   
     height: 100vh;
-  
+    
+    background-position:center;
+    block-size: cover;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background: rgb(34,193,195);
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,63,253,1) 100%);
-}
-
-.card_ace{
-
-    height: 300px;
-    width: 200px;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/01_of_spades_A.svg/1200px-01_of_spades_A.svg.png");
-    background-size: 210px;
-    background-position: center;
-    box-shadow: 0px 0px 0px 5px red;
-       
+    justify-content: space-around;
+    font-size: 70px;
+    font-family: calibri;
+    
     
 }
-.card_ace:hover{
-    background-image: url("https://opengameart.org/sites/default/files/card%20back%20blue.png");
-    transform: rotateY(180deg);
-   
-    transform-style: preserve-3d;
-    transition: transform 2s;
+
+.second-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 250px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    margin:10px;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background: rgb(255,252,0);
+background: linear-gradient(0deg, rgba(255,252,0,1) 0%, rgba(254,0,0,1) 100%);
+    color: white;
+    text-shadow:1px 2px 1px black ;
+    font-size: 20px;
+    transform: rotateY(180deg);
+    margin-bottom: 10px;
+    
+  }
+
+  h2 {
+      font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(0deg, rgba(255,0,0,1) 0%, rgba(255,255,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+  }
